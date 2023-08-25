@@ -1,5 +1,10 @@
+const container = document.querySelector('.container');
+const gridSizeBtn = document.querySelector('.gridSizeBtn');
+const cleanBtn = document.querySelector('.cleanBtn');
+const colorPicker = document.querySelector('#colorPicker');
+
 let mouseIsDown = false;
-let selectedColor = 'green';
+let selectedColor = colorPicker.value;
 const MAX_GRID_SIZE = 100;
 const GRID_RELATIVE_SIZE = 90; //Size of sketch-board relative to screen (actually size of each individual cell in the grid)
 const root = document.querySelector(':root');
@@ -22,9 +27,7 @@ function disableDraggingOnGrid(){
     });    
 }
 
-const container = document.querySelector('.container');
-const gridSizeBtn = document.querySelector('.gridSizeBtn');
-const cleanBtn = document.querySelector('.cleanBtn');
+
 disableDraggingOnGrid();
 
 function initializeGrid(gridSize){
@@ -55,6 +58,15 @@ function initializeGrid(gridSize){
         container.appendChild(col);
     }
 }
+
+
+
+
+colorPicker.addEventListener('input', function() {
+     selectedColor = colorPicker.value;
+  
+});
+
 
 function deleteGridCells() {
     while (container.firstChild) {
