@@ -1,17 +1,17 @@
 body{
-    background-color: black;
+    background-color: rgba(14, 13, 13, 0.918);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .container{
     display: flex;
-     background-color: navajowhite;
+    background-color: rgba(150, 150, 150, 0.137);
+    border:1px solid #9ecaed ;
 }
 
-.cell{
-    width:40px;
-    height:40px;
-    border:1px solid white;
-}
+
 
 :root {
     --hover-background-color: "white"; 
@@ -27,9 +27,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
 }
 
-.gridSizeBtn{
+
+.utilityBtns button{
     margin: 10px;
     height: 30px;
 }
+
+
