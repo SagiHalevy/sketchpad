@@ -48,7 +48,7 @@ function initializeGrid(gridSize){
             });
             cell.addEventListener('mouseout', ()=> cell.classList.remove('hovered'));
             cell.addEventListener('mousedown',(e)=>{   
-                if (e.button === 0) { //left mouse click
+                if (e.button === 0) { //draw as long as left mouse button is down
                     mouseIsDown=true;
                     fillCellWithColor(cell);              
                 }
@@ -71,6 +71,7 @@ colorPicker.addEventListener('input', function() {
 function deleteGridCells() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
+
     }
 }
 
@@ -89,6 +90,7 @@ function cleanGrid(){
     
     document.querySelectorAll('.cell').forEach((cell)=>{
         cell.style.removeProperty("background-color");
+        
     })
 }
 
